@@ -2,11 +2,11 @@ import scala.util.Random
 
 object Main extends App {
 
-  def generateRandomList(size: Int): List[Int] = {
+  private def generateRandomList(size: Int): List[Int] = {
     List.fill(size)(Random.nextInt(100)) // Генерация списка случайных чисел до 100
   }
 
-  def sumOfPairs(list: List[Int], target: Int): Int = {
+  private def sumOfPairs(list: List[Int], target: Int): Int = {
     val distinctPairs = for {
       i <- list
       j <- list if i < j && (i + j) < target
@@ -15,9 +15,9 @@ object Main extends App {
     distinctPairs.sum
   }
 
-  val randomListSize = 10
-  val randomList = generateRandomList(randomListSize)
-  val targetValue = 25
+  private val randomListSize = 10
+  private val randomList = generateRandomList(randomListSize)
+  private val targetValue = 25
 
   println(s"Сгенерированный список чисел: $randomList")
   println(s"Заданное значение: $targetValue")
