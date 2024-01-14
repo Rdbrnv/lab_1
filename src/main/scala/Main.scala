@@ -1,6 +1,6 @@
 import scala.util.Random
 
-object SumOfPairs extends App {
+object Main extends App {
 
   def generateRandomList(size: Int): List[Int] = {
     List.fill(size)(Random.nextInt(100)) // Генерация списка случайных чисел до 100
